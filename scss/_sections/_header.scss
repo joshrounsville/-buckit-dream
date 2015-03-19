@@ -1,0 +1,46 @@
+/* ==========================================================================
+  Header
+========================================================================== */
+
+
+header {
+  .row {
+    animation: fadeIn 0.3s 0.1s both;
+  }
+}
+
+.logo {
+  @include fontBold();
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+  span {
+    padding: 0 0 0 20px;
+  }
+
+  @include breakpoint(small) {
+    span {
+      padding: 0 0 0 10px;
+    }
+  }
+}
+
+.logo-header {
+  @include breakpoint(small) {
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+.logo-footer {
+  @include breakpoint(small) {
+    img {
+      width: 70px;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+/* ==========================================================================
+  Classes
+========================================================================== */
+
+
+/*==========  FLOATS/ORDER  ==========*/
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+
+
+/*==========  TEXT  ==========*/
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-highlight {
+  font-size: $fontLarge;
+  line-height: $lineHeightHeader;
+
+  @include breakpoint(large) {
+    font-size: $fontLarge - 5;
+  }
+  @include breakpoint(medium) {
+    font-size: $fontLarge - 7;
+  }
+  @include breakpoint(small) {
+    font-size: $fontLarge - 13;
+    line-height: $lineHeight;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+
+
+/*==========  BACKGROUND  ==========*/
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: $colorGray;
+}
+
+.bg-blue {
+  background-color: $colorBlue;
+}
+
+.bg-red {
+  background-color: $colorRed;
+}
+
+
+
+/*==========  BORDER  ==========*/
+
+.inline-border {
+  position: relative;
+  text-align: center;
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -1px;
+  }
+  .text {
+    display: inline-block;
+    background: #333;
+    padding: 0 8px;
+  }
+}
+
+
+
+/*==========  ALIGNMENT  ==========*/
+
+.flex-v-align {
+  align-items: center;
+}
+
+.flex-t-align {
+  align-items: flex-start;
+}
+
+.flex-b-align {
+  align-items: flex-end;
+}
+
+.v-align {
+  @include vAlign();
+}
+
+
+/*==========  HIDE  ==========*/
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.tablet-hide {
+  @include breakpoint(medium) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.mobile-hide {
+  @include breakpoint(small) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+
+/*==========  UTILITIES  ==========*/
+
+.break {
+  display: block;
+
+  @include breakpoint(large) {
+    display: inline;
+  }
+  @include breakpoint(medium) {
+    display: inline;
+  }
+  @include breakpoint(small) {
+    display: inline;
+  }
+}
+
+.truncate {
+  @include ellipsis();
+}
+
+.pull-down {
+  margin-bottom: -70px;
+
+  @include breakpoint(small) {
+    margin-bottom: 0;
+  }
+}
+
+
+
+

@@ -1,0 +1,33 @@
+/* ==========================================================================
+  Footer
+========================================================================== */
+
+
+footer {
+  color: #fff;
+  font-size: $fontSmall;
+  @include fontSemiBold();
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    &:hover,
+    &:focus {
+      color: $colorRed;
+    }
+  }
+  li {
+    line-height: 1;
+    border-right: 1px solid #fff;
+    margin: 0 5px 0 0;
+    padding: 0 8px 0 0;
+    &:last-of-type {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(small) {
+    font-size: $fontSmall - 2;
+  }
+}

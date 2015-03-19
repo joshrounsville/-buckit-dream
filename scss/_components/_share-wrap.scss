@@ -1,0 +1,52 @@
+/* ==========================================================================
+  Share Wrap
+========================================================================== */
+
+
+.nav-social {
+  text-align: center;
+  li {
+    display: inline-block;
+    position: relative;
+    padding: 0 5px;
+  }
+  iframe {
+    max-width: none;
+  }
+
+  @include breakpoint(small) {
+    ul {
+      display: block;
+      @include clearfix();
+    }
+    li {
+      width: 33.3333%;
+      float: left;
+    }
+  }
+}
+
+.facebook {
+  top: -11px;
+
+  @include breakpoint(small) {
+    top: -8px;
+  }
+}
+
+.twitter {
+  margin-right: -19px;
+
+  @include breakpoint(small) {
+    margin-right: 0;
+  }
+}
+
+.google-plus {
+  bottom: -2px;
+
+  @include breakpoint(small) {
+    top: -3px;
+    bottom: 0;
+  }
+}
