@@ -21,6 +21,7 @@ ul, ol {
   }
   a {
     display: block;
+    @include clearfix();
   }
   img {
     height: 56px;

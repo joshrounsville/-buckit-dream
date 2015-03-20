@@ -15,10 +15,18 @@
 
 .order-1 {
   order: 1;
+
+  .no-flexbox & {
+    float: left;
+  }
 }
 
 .order-2 {
   order: 2;
+
+  .no-flexbox & {
+    float: right;
+  }
 }
 
 
@@ -112,6 +120,12 @@
 
 .flex-v-align {
   align-items: center;
+
+  .no-flexbox & {
+    .span7 {
+      padding-top: 100px;
+    }
+  }
 }
 
 .flex-t-align {

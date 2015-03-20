@@ -48,7 +48,7 @@
   padding-top: $padding;
 
   @include breakpoint(small) {
-    padding-top: 20px;
+    padding-top: 30px;
   }
 }
 
@@ -92,6 +92,10 @@
 
 .pad-b--20 {
   padding-bottom: 20px;
+
+  @include breakpoint(small) {
+    padding-bottom: 10px;
+  }
 }
 
 .pad-b--10 {

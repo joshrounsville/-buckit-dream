@@ -7,8 +7,17 @@ img,
 video,
 object {
   max-width: 100%;
+}
 
+.img-size-standard {
   @include breakpoint(small) {
-    max-width: 70%;
+    width: 180px;
+  }
+}
+
+.img-size-adjust {
+  @include breakpoint(small) {
+    width: 222px;
+    margin-right: -42px;
   }
 }

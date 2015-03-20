@@ -7,6 +7,23 @@ $(function() {
   var isPhone = body.css('padding-bottom') === '1px';
   var isDesktop = body.css('margin-bottom') !== '1px';
   var notDesktop = body.css('margin-bottom') === '1px';
+  var isIE;
+
+  var msieversion = function() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+
+    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+      isIE = true;
+    } else {
+      isIE = false;
+    }
+
+   return isIE;
+  };
+
+  msieversion();
+
 
   $(window).resize(function() {
     isPhone = body.css('padding-bottom') === '1px';
@@ -15,11 +32,10 @@ $(function() {
   });
 
 
-
   //////// svg fallback
   Modernizr.addTest('svgasimg', document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
 
-  if ( !Modernizr.svgasimg ) {
+  if ( !Modernizr.svgasimg || isIE ) {
     $('img[src*="svg"]').attr('src', function() {
       return $(this).attr('src').replace('.svg', '.png');
     });
